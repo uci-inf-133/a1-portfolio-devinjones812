@@ -1,24 +1,582 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<!--
-WRITTEN BY: Your name here
-EMAIL: Your email here
--->
-
 <head>
-  <meta charset="utf-8">
-  <meta name="author" content="Your name here">
-  <meta name="description" content="description of your page">
-   <!-- you would link to an external stylesheet here! -->
-   <!-- you would also link to Bootstrap here! -->
-  <title>Devin's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Devin Jones - CS @ UC Irvine | GenAI Engineer | AWS Certified">
+    <title>Devin Jones | Portfolio</title>
+    
+    <!-- Google Fonts - DM Sans + Fraunces + Space Grotesk for warm, modern feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <p>
-    <a href="http://validator.w3.org/check?uri=referer">
-       W3C validator
-    </a>
-  </p>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <nav aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="#hero" class="nav-logo">
+                    <span class="logo-text">DJ</span>
+                </a>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#about" role="menuitem">About</a></li>
+                    <li role="none"><a href="#experience" role="menuitem">Experience</a></li>
+                    <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                    <li role="none"><a href="#adventures" role="menuitem">Adventures</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+                    <li role="none">
+                        <a href="https://linkedin.com/in/devinjones812" target="_blank" rel="noopener noreferrer" role="menuitem" aria-label="LinkedIn Profile (opens in new tab)">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-background">
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="images/profile.png" alt="Devin Jones - CS @ UC Irvine | GenAI Engineer" class="profile-image">
+                </div>
+                <div class="hero-text">
+                    <p class="hero-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Seattle & Irvine</p>
+                    <h1 class="hero-name">Devin Jones</h1>
+                    <p class="hero-title">CS @ UC Irvine <span class="divider">|</span> Machine Learning Engineer</p>
+                    <p class="hero-tagline">Building by week, exploring by weekend 🏔️</p>
+                    <div class="hero-cta">
+                        <a href="#experience" class="btn btn-primary">
+                            View Experience
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>Scroll</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-label">Get to know me</span>
+                    <h2>About Me</h2>
+                </header>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead">
+                            I'm a Computer Science student at UC Irvine with a passion for building 
+                            AI systems that make a real impact. From designing GenAI solutions at AWS 
+                            to co-founding an investment and trading group, I love turning complex ideas into working products.
+                        </p>
+                        <p>
+                            When I'm not deep in code, you'll find me surfing in Newport Beach, 
+                            snowboarding in the mountains, or exploring new places around the world. 
+                            I believe the best engineers bring creativity from all aspects of life into their work.
+                        </p>
+                        <p>
+                            Currently focused on agentic AI systems, applying LLMs to cutting-edge problems, 
+                            and finding new ways for technology to address environmental challenges.
+                        </p>
+                        
+                        <div class="certifications">
+                            <h3><i class="fab fa-aws" aria-hidden="true"></i> AWS Certifications</h3>
+                            <ul class="cert-list" aria-label="AWS Certifications">
+                                <li><i class="fas fa-certificate" aria-hidden="true"></i> AWS Certified Solutions Architect, Associate</li>
+                                <li><i class="fas fa-certificate" aria-hidden="true"></i> AWS Certified AI Practitioner</li>
+                                <li><i class="fas fa-certificate" aria-hidden="true"></i> AWS Certified Cloud Practitioner</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <aside class="about-image-aside">
+                        <figure class="about-image-wrapper">
+                            <img src="images/adventures/adventure1.png" alt="Devin Jones on an adventure" class="about-image">
+                            <figcaption class="visually-hidden">Photo of Devin</figcaption>
+                        </figure>
+                        <div class="skills-cloud">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">AWS Bedrock</span>
+                            <span class="skill-tag">AutoGen</span>
+                            <span class="skill-tag">RAG</span>
+                            <span class="skill-tag">LLMs</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">Node.js</span>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-label">Where I've worked</span>
+                    <h2>Experience</h2>
+                </header>
+                
+                <div class="timeline">
+                    <!-- AWS GenAI Strategist -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Amazon Web Services (AWS)</h3>
+                                    <p class="role">GenAI Strategist (SDE)</p>
+                                </div>
+                                <time class="timeline-date" datetime="2025-05">May - Aug 2025</time>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Seattle, WA</p>
+                            <p class="timeline-description">
+                                Design, implement, and scale GenAI solutions for AWS strategic enterprise accounts, 
+                                driving rapid transformation from ideation to high-performance production AI workloads.
+                            </p>
+                            <ul class="timeline-tags" aria-label="Technologies used">
+                                <li>GenAI</li>
+                                <li>Enterprise AI</li>
+                                <li>AWS</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- AWS Deep Learning Architect -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Amazon Web Services (AWS)</h3>
+                                    <p class="role">Deep Learning Architect</p>
+                                </div>
+                                <time class="timeline-date" datetime="2024-06">Jun - Sep 2024</time>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Seattle, WA</p>
+                            <p class="timeline-description">
+                                Applied Science team, GenAI Innovation Center. Comparative research, prototyping 
+                                and evaluation for agentic frameworks including LangGraph, AutoGen, and Bedrock Agents.
+                            </p>
+                            <ul class="timeline-tags" aria-label="Technologies used">
+                                <li>LangGraph</li>
+                                <li>AutoGen</li>
+                                <li>Bedrock Agents</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Irvine ITG -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Irvine Investment and Trading Group</h3>
+                                    <p class="role">Co-Founder, CTO</p>
+                                </div>
+                                <time class="timeline-date" datetime="2022-12">Dec 2022 - Dec 2024</time>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Irvine, CA</p>
+                            <p class="timeline-description">
+                                Built technical framework for ITG and irvineitg.com. Led instructional sessions on AI/ML literacy 
+                                and AI in Finance. Secured $8,000+ in funding from the Dean's Leadership Circle. 
+                                <strong>Irvine ITG has 4x the internship offer rate of every other finance organization on campus.</strong>
+                            </p>
+                            <ul class="timeline-tags" aria-label="Technologies used">
+                                <li>Leadership</li>
+                                <li>AI/ML</li>
+                                <li>Finance</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Griptape -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Griptape</h3>
+                                    <p class="role">Software Development Engineer</p>
+                                </div>
+                                <time class="timeline-date" datetime="2023-06">Jun - Sep 2023</time>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Seattle, WA</p>
+                            <p class="timeline-description">
+                                Knowledge graph RAG, chain-of-thought reasoning, and agentic workflow development. 
+                                <strong>Developed and launched 3 of Griptape's 12 flagship tools.</strong>
+                            </p>
+                            <ul class="timeline-tags" aria-label="Technologies used">
+                                <li>RAG</li>
+                                <li>Knowledge Graphs</li>
+                                <li>Agentic AI</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Wakesurf WA -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Wakesurf WA</h3>
+                                    <p class="role">Founder & Lead Instructor</p>
+                                </div>
+                                <time class="timeline-date" datetime="2020-06">Jun 2020 - Sep 2023</time>
+                            </div>
+                            <p class="timeline-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Lake Washington</p>
+                            <p class="timeline-description">
+                                Built customer base of 50+ with 400+ hours experience instructing, driving, and working with 
+                                wakesurf/wakeboard boats. Professional skill coaching and watercraft optimization.
+                            </p>
+                            <ul class="timeline-tags" aria-label="Skills">
+                                <li>Entrepreneurship</li>
+                                <li>Coaching</li>
+                                <li>Wakesurfing</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Rainforest Partnership -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Rainforest Partnership</h3>
+                                    <p class="role">Technical Development Intern</p>
+                                </div>
+                                <time class="timeline-date" datetime="2023-06">Jun - Aug 2023</time>
+                            </div>
+                            <p class="timeline-description">
+                                Media exposure quantification, database research, and workflow optimization. 
+                                Emphasis on global environmental policy and UN Sustainable Development Goals.
+                            </p>
+                            <ul class="timeline-tags" aria-label="Focus areas">
+                                <li>Environmental</li>
+                                <li>UN SDGs</li>
+                                <li>Conservation</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Inspirit AI -->
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="company-info">
+                                    <h3>Inspirit AI</h3>
+                                    <p class="role">AI Scholar</p>
+                                </div>
+                                <time class="timeline-date" datetime="2021-06">Jun 2021 - Sep 2022</time>
+                            </div>
+                            <p class="timeline-description">
+                                Worked with Stanford and MIT Ph.D. students on CNN models for COVID-19 transmission prediction, 
+                                diabetic retinopathy diagnosis, and pneumonia detection from lung X-rays. 
+                                <strong>Pneumonia detection project won competition.</strong>
+                            </p>
+                            <ul class="timeline-tags" aria-label="Technologies used">
+                                <li>CNNs</li>
+                                <li>Medical AI</li>
+                                <li>Computer Vision</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-label">Things I've built</span>
+                    <h2>Projects</h2>
+                </header>
+                <p class="section-intro">A selection of projects and ventures. More coming soon!</p>
+                
+                <div class="projects-grid">
+                    <!-- Project Card 1 - ITG -->
+                    <article class="project-card featured">
+                        <div class="project-image">
+                            <img src="images/projects/itg.png" alt="Irvine Investment and Trading Group website">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-label">Co-Founded</span>
+                            <h3 class="project-title">Irvine Investment & Trading Group</h3>
+                            <p class="project-description">
+                                Built the technical framework and website for UCI's premier finance organization. 
+                                Led AI/ML education initiatives and secured $8K+ in funding. Members have 4x the 
+                                internship offer rate of other campus finance orgs.
+                            </p>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li>Web Dev</li>
+                                <li>AI/ML</li>
+                                <li>Leadership</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://irvineitg.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Irvine ITG website">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 - Griptape Tools -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="images/projects/griptape.png" alt="Griptape AI agent framework">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-label">Open Source</span>
+                            <h3 class="project-title">Griptape Flagship Tools</h3>
+                            <p class="project-description">
+                                Developed 3 of Griptape's 12 flagship tools for their AI agent framework. 
+                                Focused on knowledge graph RAG and chain-of-thought reasoning capabilities.
+                            </p>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li>Python</li>
+                                <li>RAG</li>
+                                <li>LLMs</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/griptape-ai/griptape" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
+                                    <i class="fab fa-github" aria-hidden="true"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 - Medical AI -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="image-placeholder project-placeholder" role="img" aria-label="Project screenshot placeholder">
+                                <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-label">Award Winning</span>
+                            <h3 class="project-title">Medical AI Research</h3>
+                            <p class="project-description">
+                                CNN models for pneumonia detection from lung X-rays (winning project), 
+                                diabetic retinopathy diagnosis, and COVID-19 transmission prediction. 
+                                Built with Stanford & MIT PhD mentors.
+                            </p>
+                            <ul class="project-tech" aria-label="Technologies used">
+                                <li>CNNs</li>
+                                <li>TensorFlow</li>
+                                <li>Medical Imaging</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="projects-cta">
+                    <a href="https://github.com/devinjones812" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        More on GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adventures / Blog Section -->
+        <section id="adventures" class="adventures-section">
+            <div class="section-container">
+                <header class="section-header">
+                    <span class="section-label">Life outside of code</span>
+                    <h2>Adventures</h2>
+                </header>
+                <p class="section-intro">When I'm not building AI systems, I'm out exploring the world.</p>
+
+                <div class="adventures-collage">
+                    <div class="collage-item collage-large">
+                        <img src="images/adventures/adventure-1.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-4.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-5.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item collage-tall">
+                        <img src="images/adventures/adventure-2.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-6.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item collage-wide">
+                        <img src="images/adventures/adventure-3.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-7.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-8.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-9.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-10.png" alt="Adventure photo">
+                    </div>
+                    <div class="collage-item">
+                        <img src="images/adventures/adventure-11.png" alt="Adventure photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <header class="section-header section-header-center">
+                    <span class="section-label">Let's connect</span>
+                    <h2>Get In Touch</h2>
+                </header>
+                <p class="contact-intro">
+                    I'm always interested in hearing about new opportunities, 
+                    interesting projects, or just connecting with fellow builders and adventurers.
+                </p>
+
+                <div class="contact-content">
+                    <form class="contact-form" action="#" method="POST" aria-label="Contact form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name <span class="required" aria-hidden="true">*</span></label>
+                                <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email <span class="required" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span class="required" aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </form>
+
+                    <aside class="contact-aside">
+                        <div class="contact-card">
+                            <h3>Quick Links</h3>
+                            <ul class="contact-links">
+                                <li>
+                                    <a href="https://linkedin.com/in/devinjones812" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/devinjones812" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-github" aria-hidden="true"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://instagram.com/devinjones812" target="_blank" rel="noopener noreferrer">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                                        <span>Instagram</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="location-card">
+                            <p><i class="fas fa-graduation-cap" aria-hidden="true"></i> UC Irvine '26</p>
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Seattle & Irvine</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-social">
+                <a href="https://linkedin.com/in/devinjones812" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/devinjones812" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/devinjones812" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="mailto:devinjones812@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                </a>
+            </div>
+            <p class="footer-tagline">Built with ☕ and curiosity</p>
+            <p class="footer-copyright">
+                &copy; 2026 Devin Jones. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Script -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('nav-menu-open');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.setAttribute('aria-expanded', 'false');
+                navMenu.classList.remove('nav-menu-open');
+            });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
